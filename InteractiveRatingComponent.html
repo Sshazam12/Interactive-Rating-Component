@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="InteractiveRatingComponent.css">
+    <title>interactive rating component </title>
+</head>
+
+<body>
+    <div id="Big">
+        <img class="star" src="images/icon-star.svg" alt="star">
+        <h2>How did we do?</h2>
+        <p>Please let us know how we did with your support request. all feedback is appreciated to help us improve our
+            offering!</p>
+
+        <div class="Numbers-container" id="numbers">
+            <span class="spans" id="s1">1</span>
+            <span class="spans" id="s2">2</span>
+            <span class="spans" id="s3">3</span>
+            <span class="spans" id="s4">4</span>
+            <span class="spans" id="s5">5</span>
+        </div>
+        <input type="submit" value="S U B M I T" name="" id="submit">
+
+    </div>
+
+
+    <!-- SECOND SIDE "thank you"  -->
+    <div id="Bigger">
+    <div class="div2" id="Big-container-thnks">
+        <img class="img" src="images/illustration-thank-you.svg" alt="">
+        <span class="select" id="select">You selcted 4 out of 5</span>
+        <h2>Thank you</h2>
+        <p class="p2">We appreciate you taking the time to give a rating. <span class="xx"> if you ever need more
+                support, don't hesitate to</span>get in touch!</p>
+    </div>
+</div>
+
+
+    <script>
+        const Big = document.getElementById("Big")
+        const allspans = document.querySelectorAll(".spans")
+
+        let div2 = document.getElementById("Big-container-thnks")
+        const Bigger = document.getElementById("Bigger")
+
+        const select = document.getElementById("select")
+
+
+        allspans.forEach(currentItem => {
+            currentItem.addEventListener("click",() => {
+                switch (Number.parseInt(currentItem.innerHTML)) {
+                    case 1:
+                        select.innerHTML = `You selected ${currentItem.innerHTML} out of 5`;
+                        Big.style.display="none"
+                        Bigger.style.display ="inline"
+                        break
+                    case 2:
+                        select.innerHTML = `You selected ${currentItem.innerHTML} out of 5`;
+                        Big.style.display = "none"
+                        Bigger.style.display = "block "
+                        break
+                    case 3:
+                        select.innerHTML = `You selected ${currentItem.innerHTML} out of 5`;
+                        Big.style.display = "none"
+                        Bigger.style.display = "block"
+                        break
+                    case 4:
+                        select.innerHTML = `You selected ${currentItem.innerHTML} out of 5`;
+                        Big.style.display = "none"
+                        Bigger.style.display = "block"
+                        break
+                    case 5:
+                        select.innerHTML = `You selected ${currentItem.innerHTML} out of 5`;
+                        Big.style.display = "none"
+                        Bigger.style.display = "block"
+                        break
+                }
+
+            })
+
+        });
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
